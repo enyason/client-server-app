@@ -1,0 +1,5 @@
+TODO:
+1. app.server.startup.JobProcessor will be as a property in class app.server.startup.Server
+2. Remove Datastore.setup() method.
+3. app.socket.RequestObject and app.socket.ResponseObject will be as properties in app.service.Service.
+4. app.client.startup.Socket will be as a property in app.client.startup.Client
