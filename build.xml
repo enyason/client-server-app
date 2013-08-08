@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="clientserverapp" default="build" basedir=".">
+<property name="server_src" value="server/src"/>
+<property name="client_src" value="client/src"/>
+<property name="lib" value="lib"/>
+<property name="dist" value="dist"/>
+<property name="classes" value="${dist}/classes"/>
+<property name="server_jar" value="server.jar"/>
+<property name="client_jar" value="client.jar"/>	
+
+<path id="java.classpath"> 
+<fileset dir="${lib}"> 
+   <include name="*.jar"/> 
+</fileset> 
+</path>
+	
+<target name="init">
+   <mkdir dir="${dist}"/>
+   <mkdir dir="${classes}"/>
+</target>
+<target name="compile" depends="init">
+   <javac srcdir="${server_src}" destdir="${classes}" includeantruntime="false"><classpath refid="java.classpath"/></javac>
+   <javac srcdir="${client_src}" destdir="${classes}" includeantruntime="false"><classpath refid="java.classpath"/></javac>
+</target>
+<target name="build" depends="compile">
+   <jar jarfile="${dist}/${server_jar}" basedir="${classes}" excludes="app/client/**"/> 	
+   <jar jarfile="${dist}/${client_jar}" basedir="${classes}" includes="app/client/**,app/socket/**,app/util/**"/> 	
+</target>
+<target name="clean">
+   <delete dir="${dist}" />
+</target>
+</project>
