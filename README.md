@@ -15,3 +15,13 @@ document
 =================
 1. UML class diagram of server is doc/server.jpg
 2. UML class diagram of client is doc/client.jpg
+
+build & run
+=================
+1. install jdk
+2. install ant
+3. run "ant" to build.
+4. run "java -cp ./dist/classes/ app.server.startup.Server" to start server.
+5. run "java -cp ./dist/classes/ app.client.startup.Client" to start client.
+
+
