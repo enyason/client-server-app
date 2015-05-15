@@ -1,20 +1,20 @@
 client-server-app
 =================
 
-This is a exercise that implements a simple nio socket server/client.
+This is an exercise to implement a simple nio socket server/client using JAVA NIO package.
 
 Functions
 =================
 1. implement nio server/client.
 2. server can handle incoming requests in parallel.
-3. data is stored in xml file, when server start, data will be loaded into memory.
+3. DB file is in xml files, when server start, those data will be loaded into memory.
 4. client can send request to add/remove/list data.
-5. server has a thread to save updated data on in-memory to data file.
+5. server has an another thread to regularly save updated data from in-memory to data file.
 
-document
+other document
 =================
-1. UML class diagram of server is doc/server.jpg
-2. UML class diagram of client is doc/client.jpg
+1. doc/server.jpg, to show UML class diagram for server side.
+2. doc/client.jpg, to show UML class diagram for client side.
 
 build & run
 =================
